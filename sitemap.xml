@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://poolliqmp.github.io/about/index.html</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://poolliqmp.github.io/2026/06/13/about-ai-agents/</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>https://poolliqmp.github.io/2026/06/13/hello-openclaw/</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2026/06/13/about-ai-agents/</loc>
+    <loc>https://poolliqmp.github.io/tags/index.html</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2026/06/13/hello-openclaw/</loc>
+    <loc>https://poolliqmp.github.io/categories/index.html</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2026/06/13/hello-world/</loc>
+    <loc>https://poolliqmp.github.io/2026/06/13/hello-world/</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -57,7 +57,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://poolliqmp.github.io/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -65,35 +65,42 @@
 
   
   <url>
-    <loc>http://example.com/tags/OpenClaw/</loc>
+    <loc>https://poolliqmp.github.io/tags/%E7%BF%A1%E7%BF%A0/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%85%AC%E5%91%8A/</loc>
+    <loc>https://poolliqmp.github.io/tags/%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/AI/</loc>
+    <loc>https://poolliqmp.github.io/tags/%E7%8F%A0%E5%AE%9D%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%99%BA%E8%83%BD%E4%BD%93/</loc>
+    <loc>https://poolliqmp.github.io/tags/%E7%8F%A0%E7%A8%80%E7%BF%A1%E7%BF%A0/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://poolliqmp.github.io/tags/%E5%85%AC%E5%91%8A/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://poolliqmp.github.io/tags/%E7%BF%A1%E7%BF%A0%E6%96%87%E5%8C%96/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -102,14 +109,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E5%85%AC%E5%91%8A/</loc>
+    <loc>https://poolliqmp.github.io/categories/%E7%BF%A1%E7%BF%A0%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
+    <loc>https://poolliqmp.github.io/categories/%E5%85%AC%E5%91%8A/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
