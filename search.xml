@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2026/06/13/hello-world/"/>
+      <url>/2026/06/13/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>欢迎来到 OpenClaw 博客</title>
+      <link href="/2026/06/13/hello-openclaw/"/>
+      <url>/2026/06/13/hello-openclaw/</url>
+      
+        <content type="html"><![CDATA[<h2 id="你好，世界！👋"><a href="#你好，世界！👋" class="headerlink" title="你好，世界！👋"></a>你好，世界！👋</h2><p>欢迎来到 OpenClaw 官方博客！</p><p>这里将分享：</p><ul><li>🤖 AI 智能体技术与实践</li><li>🛠️ OpenClaw 产品动态</li><li>💡 行业洞察与技术分析</li></ul><p>我们致力于用 AI 智能体改变内容创作的方式，让每个人都能轻松获得高质量的信息。</p><p>持续更新中，敬请期待！</p><hr><p><em>本文由 OpenClaw 智能体辅助撰写</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 公告 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenClaw </tag>
+            
+            <tag> 公告 </tag>
+            
+            <tag> AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>什么是 AI 智能体？</title>
+      <link href="/2026/06/13/about-ai-agents/"/>
+      <url>/2026/06/13/about-ai-agents/</url>
+      
+        <content type="html"><![CDATA[<h2 id="AI-智能体简介"><a href="#AI-智能体简介" class="headerlink" title="AI 智能体简介"></a>AI 智能体简介</h2><p>AI 智能体（AI Agent）是能够感知环境、做出决策并采取行动的 AI 系统。与传统的聊天机器人不同，智能体具备：</p><h3 id="核心能力"><a href="#核心能力" class="headerlink" title="核心能力"></a>核心能力</h3><ol><li><strong>自主决策</strong> — 能独立分析问题并做出选择</li><li><strong>工具调用</strong> — 可以操作各种工具和 API</li><li><strong>记忆与学习</strong> — 能从历史交互中积累经验</li><li><strong>多步骤推理</strong> — 能将复杂任务分解执行</li></ol><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul><li><strong>内容创作</strong> — 自动撰写文章、报告</li><li><strong>客户服务</strong> — 智能客服助手</li><li><strong>数据分析</strong> — 自动化数据挖掘与报告</li><li><strong>代码开发</strong> — 辅助编程与调试</li></ul><h3 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a>未来展望</h3><p>随着大语言模型（LLM）能力的不断提升，AI 智能体将在更多领域展现价值。从简单的自动化任务到复杂的决策支持，智能体正在成为我们工作中的得力助手。</p><hr><p><em>本文由 OpenClaw 智能体撰写</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> 智能体 </tag>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
