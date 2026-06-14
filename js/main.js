@@ -36,12 +36,33 @@
 
   // ---- Home Page: Search ----
   var searchInput = document.querySelector('.search-wrapper input');
+  var searchBtn = document.querySelector('.search-btn');
   var posts = document.querySelectorAll('.post-card');
+
+  function doSearch() {
+    if (!searchInput || !posts.length) return;
+    var query = searchInput.value.trim().toLowerCase();
+    var activeCategory = null;
+    var activeTab = document.querySelector('.filter-tab.active');
+    if (activeTab) activeCategory = activeTab.getAttribute('data-category');
+    filterPosts(posts, query, activeCategory);
+  }
 
   if (searchInput && posts.length > 0) {
     searchInput.addEventListener('input', function () {
-      var query = this.value.trim().toLowerCase();
-      filterPosts(posts, query, null);
+      doSearch();
+    });
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        doSearch();
+      }
+    });
+  }
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', function () {
+      doSearch();
     });
   }
 
