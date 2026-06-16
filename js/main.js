@@ -132,6 +132,149 @@
     });
   }
 
+  // ---- Share Buttons ----
+  var siteUrl = location.origin;
+  var sharePlatforms = {
+    wechat: { label: '微信', icon: '\ud83d\udcac', url: function(title, url) {
+      // 微信：复制链接，提示扫码分享
+      return null;
+    }},
+    weibo: { label: '微博', icon: '\ud83d\udfe5', url: function(title, url) {
+      return 'https://service.weibo.com/share/share.php?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title);
+    }},
+    xhs: { label: '小红书', icon: '\ud83d\udd25', url: function(title, url) {
+      // 小红书：复制链接
+      return null;
+    }},
+    qq: { label: 'QQ', icon: '\ud83d\udc71', url: function(title, url) {
+      return 'https://connect.qq.com/widget/share/shareshare.html?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title);
+    }},
+    zhihu: { label: '知乎', icon: '\ud83d\udcda', url: function(title, url) {
+      return 'https://www.zhihu.com/question/share?url=' + encodeURIComponent(url);
+    }},
+    baidu: { label: '贴吧', icon: '\ud83d\udcdc', url: function(title, url) {
+      return 'https://tieba.baidu.com/f/share/sharePost?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title);
+    }}
+  };
+
+  function createShareSection() {
+    var postPage = document.querySelector('.post-page');
+    if (!postPage) return;
+
+    var title = document.querySelector('.post-page-title');
+    if (!title) return;
+
+    var articleTitle = title.textContent.trim();
+    var articleUrl = siteUrl + location.pathname;
+
+    var shareDiv = document.createElement('div');
+    shareDiv.className = 'share-section';
+
+    var box = document.createElement('div');
+    box.className = 'share-box';
+
+    var shareTitle = document.createElement('div');
+    shareTitle.className = 'share-title';
+    shareTitle.textContent = '\ud83d\udce3 分享到';
+    box.appendChild(shareTitle);
+
+    var btnContainer = document.createElement('div');
+    btnContainer.className = 'share-buttons';
+
+    // Build platform buttons
+    Object.keys(sharePlatforms).forEach(function(key) {
+      var platform = sharePlatforms[key];
+      var btn = document.createElement('button');
+      btn.className = 'share-btn ' + key;
+      btn.innerHTML = platform.icon + ' ' + platform.label;
+      btn.setAttribute('data-platform', key);
+      btn.setAttribute('data-title', articleTitle);
+      btn.setAttribute('data-url', articleUrl);
+      btnContainer.appendChild(btn);
+    });
+
+    // Copy link button
+    var copyBtn = document.createElement('button');
+    copyBtn.className = 'share-btn copy-link';
+    copyBtn.innerHTML = '\ud83d\udccb 复制链接';
+    copyBtn.setAttribute('data-url', articleUrl);
+    copyBtn.setAttribute('data-title', articleTitle);
+    btnContainer.appendChild(copyBtn);
+
+    box.appendChild(btnContainer);
+    shareDiv.appendChild(box);
+
+    // Insert after post-page-content, before back-btn
+    var postContent = document.querySelector('.post-page-content');
+    var backBtnWrap = document.querySelector('.post-page')?.querySelector(':scope > div:last-child');
+    if (postContent && backBtnWrap) {
+      postPage.insertBefore(shareDiv, backBtnWrap.nextSibling);
+    } else {
+      postPage.appendChild(shareDiv);
+    }
+
+    // Bind events
+    btnContainer.querySelectorAll('.share-btn').forEach(function(b) {
+      b.addEventListener('click', function() {
+        var platform = this.getAttribute('data-platform');
+        var t = this.getAttribute('data-title');
+        var u = this.getAttribute('data-url');
+
+        if (platform === 'copy-link') {
+          copyToClipboard(u);
+          return;
+        }
+
+        var sp = sharePlatforms[platform];
+        var link = sp.url(t, u);
+        if (link) {
+          window.open(link, '_blank', 'width=600,height=400,noopener,noreferrer');
+        } else if (platform === 'wechat' || platform === 'xhs') {
+          copyToClipboard(u);
+          showToast('已复制链接，请在' + sp.label + '中粘贴分享');
+        }
+      });
+    });
+  }
+
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function() {
+        showToast('链接已复制到剪贴板');
+      }).catch(function() {
+        fallbackCopy(text);
+      });
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showToast('链接已复制到剪贴板'); }
+    catch(e) { showToast('复制失败，请手动复制链接'); }
+    document.body.removeChild(ta);
+  }
+
+  function showToast(msg) {
+    var toast = document.querySelector('.share-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'share-toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2500);
+  }
+
+  createShareSection();
+
   // ---- Smooth Scroll for anchor links ----
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
