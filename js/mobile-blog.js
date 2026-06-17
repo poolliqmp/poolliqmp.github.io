@@ -119,10 +119,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // ===== 底部导航切换 =====
+  // ===== 底部导航：自动高亮当前页面 + 点击切换 =====
   const bottomNav = document.querySelector('.bottom-nav');
   if (bottomNav) {
     const bottomNavItems = bottomNav.querySelectorAll('.bottom-nav-item');
+    const currentPath = window.location.pathname.replace(/\/$/, '');
+    
+    // 自动高亮当前页面
+    bottomNavItems.forEach(function(item) {
+      const href = item.getAttribute('href').replace(/\/$/, '');
+      if (href === currentPath || (href === '/' && (currentPath === '' || currentPath === '/index.html'))) {
+        bottomNavItems.forEach(function(nav) { nav.classList.remove('active'); });
+        item.classList.add('active');
+      }
+    });
+    
+    // 点击切换
     bottomNavItems.forEach(function(item) {
       item.addEventListener('click', function() {
         bottomNavItems.forEach(function(nav) { nav.classList.remove('active'); });
