@@ -1,0 +1,55 @@
+<!-- 内容详情页 - 移动端沉浸式阅读 -->
+
+<div class="detail-page">
+  <!-- 媒体区 -->
+  <% if (page.cover){ %>
+    <img src="<%- url_for(page.cover) %>" class="detail-media" alt="<%= page.title %>">
+  <% } else { %>
+    <div class="detail-media" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+  <% } %>
+  
+  <!-- 作者信息栏 -->
+  <div class="detail-author-bar">
+    <div class="detail-author-info">
+      <div class="detail-avatar"></div>
+      <span class="detail-author-name">珠稀翡翠珠宝</span>
+    </div>
+    <button class="detail-follow-btn">+ 关注</button>
+  </div>
+  
+  <!-- 正文阅读区 -->
+  <div class="detail-content">
+    <%- page.content %>
+  </div>
+  
+  <!-- 评论区（可折叠） -->
+  <div class="comment-area collapsed">
+    <div class="comment-toggle">查看全部评论 ▶</div>
+    <!-- 评论区域 -->
+  </div>
+  
+  <!-- 底部相关推荐 -->
+  <div class="related-posts">
+    <!-- 横向滑动推荐 -->
+  </div>
+</div>
+
+<!-- 底部操作栏 -->
+<div class="detail-bottom-bar">
+  <a class="bottom-action" data-action="like">
+    <span class="bottom-action-icon">🤍</span>
+    <span class="bottom-action-text">点赞</span>
+  </a>
+  <a class="bottom-action" data-action="collect">
+    <span class="bottom-action-icon">⭐</span>
+    <span class="bottom-action-text">收藏</span>
+  </a>
+  <a class="bottom-action" data-action="share">
+    <span class="bottom-action-icon">↗️</span>
+    <span class="bottom-action-text">分享</span>
+  </a>
+  <a class="bottom-action" data-action="comment">
+    <span class="bottom-action-icon">💬</span>
+    <span class="bottom-action-text">评论</span>
+  </a>
+</div>

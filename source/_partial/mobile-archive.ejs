@@ -1,0 +1,68 @@
+<!-- 信息流首页 - 移动端卡片布局 -->
+
+<!-- 英雄区（置顶爆款） -->
+<div class="hero-banner">
+  <div class="hero-content">
+    <div class="hero-title">💎 珠稀翡翠珠宝</div>
+    <div class="hero-desc">天然翡翠 · 匠心传承</div>
+  </div>
+</div>
+
+<!-- 横向滚动分类标签 -->
+<div class="category-tabs">
+  <a href="/" class="tab-item active">全部</a>
+  <a href="/categories/翡翠知识/" class="tab-item">翡翠知识</a>
+  <a href="/categories/翡翠鉴赏/" class="tab-item">翡翠鉴赏</a>
+  <a href="/categories/公告/" class="tab-item">公告</a>
+  <a href="/tags/选购指南/" class="tab-item">选购指南</a>
+  <a href="/tags/保养技巧/" class="tab-item">保养技巧</a>
+</div>
+
+<!-- 信息流卡片 -->
+<div class="feed-container">
+  <% if (expand){ %>
+    <% page.posts.each(function(post, index){ %>
+      <article class="feed-card" style="animation-delay: <%= index * 0.1 %>s">
+        <% if (post.cover){ %>
+          <img src="<%- url_for(post.cover) %>" class="card-media" alt="<%= post.title %>">
+        <% } else { %>
+          <div class="card-media" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+        <% } %>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+          </div>
+          <div class="card-excerpt">
+            <% if (post.excerpt){ %>
+              <%= post.excerpt.stripTags().substring(0, 100) %>...
+            <% } else { %>
+              点击查看完整内容...
+            <% } %>
+          </div>
+          <div class="card-meta">
+            <div class="card-author">
+              <div class="card-avatar"></div>
+              <span class="card-author-name">珠稀翡翠珠宝</span>
+            </div>
+            <div class="card-actions">
+              <span class="card-action-btn">❤️ <%= post.likes || 0 %></span>
+              <span class="card-action-btn">💬 <%= post.comments || 0 %></span>
+            </div>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+  <% } %>
+</div>
+
+<!-- 分页 -->
+<% if (page.total > 1){ %>
+  <nav id="page-nav" class="pagination">
+    <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+    <%- paginator({
+      prev_text: prev_text,
+      next_text: next_text,
+      escape: false
+    }) %>
+  </nav>
+<% } %>

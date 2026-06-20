@@ -1,0 +1,19 @@
+<!-- 底部导航栏（移动端） -->
+<nav class="bottom-nav">
+  <a href="/" class="bottom-nav-item <% if (is_home()) { %>active<% } %>"">
+    <span class="bottom-nav-icon">🏠</span>
+    <span class="bottom-nav-text">首页</span>
+  </a>
+  <a href="/categories/" class="bottom-nav-item <% if (is_category() || is_tag()) { %>active<% } %>"">
+    <span class="bottom-nav-icon">🔍</span>
+    <span class="bottom-nav-text">发现</span>
+  </a>
+  <a href="/archives/" class="bottom-nav-item <% if (is_archive()) { %>active<% } %>"">
+    <span class="bottom-nav-icon">📑</span>
+    <span class="bottom-nav-text">订阅</span>
+  </a>
+  <a href="/about/" class="bottom-nav-item <% if (page.layout === 'page' && !is_home() && !is_archive() && !is_category() && !is_tag()) { %>active<% } %>"">
+    <span class="bottom-nav-icon">👤</span>
+    <span class="bottom-nav-text">我的</span>
+  </a>
+</nav>
