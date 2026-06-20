@@ -1,0 +1,393 @@
+/* 小红书风格主题 */
+
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #ff2442;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e01e3a;
+}
+
+/* 顶部导航栏 - 小红书风格 */
+#header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 20px;
+}
+
+#header-outer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+#header-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff2442;
+}
+
+#subtitle {
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
+}
+
+#main-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav-link {
+  font-size: 16px;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.main-nav-link:hover {
+  background: #fff0f3;
+  color: #ff2442;
+}
+
+/* 搜索框 - 小红书风格 */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form-input {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 200px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-form-input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #ff2442;
+}
+
+/* 主内容区 */
+#main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* 瀑布流卡片布局 */
+#main .article {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+#main .article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 文章头部 */
+.article-meta {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.article-date {
+  font-size: 13px;
+  color: #999;
+}
+
+.article-category-link {
+  background: #fff0f3;
+  color: #ff2442;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* 文章内容区 */
+.article-inner {
+  padding: 20px;
+}
+
+.article-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.article-title a {
+  color: #333;
+}
+
+.article-title a:hover {
+  color: #ff2442;
+}
+
+/* 文章内容样式 */
+.e-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.e-content h2, .e-content h3, .e-content h4 {
+  color: #ff2442;
+  margin: 20px 0 10px 0;
+}
+
+.e-content p {
+  margin-bottom: 15px;
+}
+
+.e-content ul, .e-content ol {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.e-content li {
+  margin-bottom: 8px;
+}
+
+.e-content strong {
+  color: #ff2442;
+  font-weight: bold;
+}
+
+.e-content blockquote {
+  background: #fff8f9;
+  border-left: 4px solid #ff2442;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* 文章底部 */
+.article-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-share-link {
+  background: #ff2442;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.article-share-link:hover {
+  background: #e01e3a;
+  color: #fff;
+}
+
+.article-tag-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.article-tag-list-link {
+  background: #f5f5f5;
+  color: #666;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.article-tag-list-link:hover {
+  background: #ff2442;
+  color: #fff;
+}
+
+/* 文章详情页 */
+.post .article-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.post .article-entry {
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* 侧边栏 */
+#sidebar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.widget-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ff2442;
+}
+
+.widget ul {
+  list-style: none;
+}
+
+.widget li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.widget li:last-child {
+  border-bottom: none;
+}
+
+.widget a {
+  color: #666;
+  font-size: 14px;
+}
+
+.widget a:hover {
+  color: #ff2442;
+}
+
+/* 分页 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.pagination a {
+  background: #fff;
+  color: #666;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover, .pagination .current {
+  background: #ff2442;
+  color: #fff;
+}
+
+/* 页脚 */
+#footer {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  #header-outer {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+  
+  #main-nav {
+    margin: 10px 0;
+  }
+  
+  #main {
+    padding: 0 10px;
+  }
+  
+  .article-title {
+    font-size: 18px;
+  }
+  
+  .article-inner {
+    padding: 15px;
+  }
+  
+  #floating-categories {
+    right: 10px;
+    padding: 8px;
+  }
+}
+
+/* 加载动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#main .article {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff2442;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e01e3a;
+}
