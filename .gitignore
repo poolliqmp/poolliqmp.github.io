@@ -1,0 +1,16 @@
+# Hexo generated files (do not deploy)
+_config.yml
+_config.landscape.yml
+db.json
+yarn.lock
+package-lock.json
+package.json
+node_modules/
+scaffolds/
+source/
+themes/
+.layout.json
+.deploy_git/
+
+# Hexo public dir (we manage static files manually)
+public/
